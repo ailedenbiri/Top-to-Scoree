@@ -5,6 +5,7 @@ public class TargetCO : MonoBehaviour
 {
     public float moveDistance = 3f;
     public float moveDuration = 2f;
+    public Ease targetMoveEase = Ease.InOutSine;
 
     void Start()
     {
@@ -14,6 +15,6 @@ public class TargetCO : MonoBehaviour
         // Sonsuz sağ-sol hareket
         transform.DOMove(rightTarget, moveDuration)
                  .SetLoops(-1, LoopType.Yoyo)
-                 .SetEase(Ease.InOutSine);
+                 .SetEase(targetMoveEase);
     }
 }

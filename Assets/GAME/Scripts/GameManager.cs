@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public int maxAttempts = 10;
     private int currentAttempt = 0;
+
+    public RectTransform canvasRect;
+    public Ease uiShakeEase = Ease.OutElastic;
 
     public TMP_Text scoreText;
     public BallCO ball;
@@ -29,6 +33,7 @@ public class GameManager : MonoBehaviour
         UpdateUI();
         CheckGameOver();
         Invoke("ResetBall", 1f);
+        canvasRect.DOShakeAnchorPos(0.3f, 20f, 10, 90f).SetEase(uiShakeEase);
     }
 
     public void OnMiss()

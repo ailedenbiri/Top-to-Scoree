@@ -679,6 +679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267dfdae2baaa3946a746023e9848dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 3
+  moveDuration: 2
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   maxAttempts: 10
+  canvasRect: {fileID: 403035947}
   scoreText: {fileID: 1914901226}
   ball: {fileID: 1229170881}
 --- !u!4 &885365846
