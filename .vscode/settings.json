@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Top-to-Score.sln"
+    "dotnet.defaultSolution": "Top-to-Scoree.sln"
 }
